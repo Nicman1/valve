@@ -1,0 +1,27 @@
+[1.679s] Invoking command in '/home/nicolas/valve_ws/src/valve_pkg': PYTHONPATH=/home/nicolas/valve_ws/build/valve_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/nicolas/valve_ws/install/valve_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/valve_pkg build --build-base /home/nicolas/valve_ws/build/valve_pkg/build install --record /home/nicolas/valve_ws/build/valve_pkg/install.log --single-version-externally-managed install_data
+[1.981s] running egg_info
+[2.004s] writing ../../build/valve_pkg/valve_pkg.egg-info/PKG-INFO
+[2.009s] writing dependency_links to ../../build/valve_pkg/valve_pkg.egg-info/dependency_links.txt
+[2.009s] writing entry points to ../../build/valve_pkg/valve_pkg.egg-info/entry_points.txt
+[2.010s] writing requirements to ../../build/valve_pkg/valve_pkg.egg-info/requires.txt
+[2.010s] writing top-level names to ../../build/valve_pkg/valve_pkg.egg-info/top_level.txt
+[2.048s] reading manifest file '../../build/valve_pkg/valve_pkg.egg-info/SOURCES.txt'
+[2.054s] writing manifest file '../../build/valve_pkg/valve_pkg.egg-info/SOURCES.txt'
+[2.054s] running build
+[2.055s] running build_py
+[2.055s] copying valve_pkg/__init__.py -> /home/nicolas/valve_ws/build/valve_pkg/build/lib/valve_pkg
+[2.056s] copying valve_pkg/valve_controller.py -> /home/nicolas/valve_ws/build/valve_pkg/build/lib/valve_pkg
+[2.057s] copying valve_pkg/valve_node.py -> /home/nicolas/valve_ws/build/valve_pkg/build/lib/valve_pkg
+[2.059s] running install
+[2.064s] running install_lib
+[2.083s] copying /home/nicolas/valve_ws/build/valve_pkg/build/lib/valve_pkg/valve_node.py -> /home/nicolas/valve_ws/install/valve_pkg/lib/python3.10/site-packages/valve_pkg
+[2.085s] byte-compiling /home/nicolas/valve_ws/install/valve_pkg/lib/python3.10/site-packages/valve_pkg/valve_node.py to valve_node.cpython-310.pyc
+[2.086s] running install_data
+[2.086s] running install_egg_info
+[2.103s] removing '/home/nicolas/valve_ws/install/valve_pkg/lib/python3.10/site-packages/valve_pkg-0.0.1-py3.10.egg-info' (and everything under it)
+[2.105s] Copying ../../build/valve_pkg/valve_pkg.egg-info to /home/nicolas/valve_ws/install/valve_pkg/lib/python3.10/site-packages/valve_pkg-0.0.1-py3.10.egg-info
+[2.106s] running install_scripts
+[2.243s] Installing valve_controller script to /home/nicolas/valve_ws/install/valve_pkg/lib/valve_pkg
+[2.244s] Installing valve_node script to /home/nicolas/valve_ws/install/valve_pkg/lib/valve_pkg
+[2.245s] writing list of installed files to '/home/nicolas/valve_ws/build/valve_pkg/install.log'
+[2.276s] Invoked command in '/home/nicolas/valve_ws/src/valve_pkg' returned '0': PYTHONPATH=/home/nicolas/valve_ws/build/valve_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/nicolas/valve_ws/install/valve_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/valve_pkg build --build-base /home/nicolas/valve_ws/build/valve_pkg/build install --record /home/nicolas/valve_ws/build/valve_pkg/install.log --single-version-externally-managed install_data

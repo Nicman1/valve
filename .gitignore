@@ -1,0 +1,45 @@
+# Python
+*.pyc
+*.pyo
+__pycache__/
+
+# ROS build files
+build/
+devel/
+install/
+
+# ROS logs
+logs/
+
+# ROS catkin workspace
+*.workspace
+*.rosinstall
+*.catkin_tools/
+
+# ROS dependencies (may be installed via venv or system)
+*.deb
+*.tar.gz
+*.tar.bz2
+*.egg
+*.egg-info
+*.dmg
+*.out
+*.so
+
+# Python virtual environment
+venv/
+env/
+ENV/
+*.env/
+
+# VS Code settings
+.vscode/
+
+# JetBrains IDE settings (e.g., PyCharm, IntelliJ)
+.idea/
+
+# MacOS specific files
+.DS_Store
+
+# Windows specific files
+Thumbs.db

@@ -1,0 +1,22 @@
+running egg_info
+writing ../../build/valve_pkg/valve_pkg.egg-info/PKG-INFO
+writing dependency_links to ../../build/valve_pkg/valve_pkg.egg-info/dependency_links.txt
+writing entry points to ../../build/valve_pkg/valve_pkg.egg-info/entry_points.txt
+writing requirements to ../../build/valve_pkg/valve_pkg.egg-info/requires.txt
+writing top-level names to ../../build/valve_pkg/valve_pkg.egg-info/top_level.txt
+reading manifest file '../../build/valve_pkg/valve_pkg.egg-info/SOURCES.txt'
+writing manifest file '../../build/valve_pkg/valve_pkg.egg-info/SOURCES.txt'
+running build
+running build_py
+copying valve_pkg/__init__.py -> /home/nicolas/valve_ws/build/valve_pkg/build/lib/valve_pkg
+copying valve_pkg/valve_node.py -> /home/nicolas/valve_ws/build/valve_pkg/build/lib/valve_pkg
+running install
+running install_lib
+copying /home/nicolas/valve_ws/build/valve_pkg/build/lib/valve_pkg/valve_node.py -> /home/nicolas/valve_ws/install/valve_pkg/lib/python3.10/site-packages/valve_pkg
+byte-compiling /home/nicolas/valve_ws/install/valve_pkg/lib/python3.10/site-packages/valve_pkg/valve_node.py to valve_node.cpython-310.pyc
+running install_egg_info
+removing '/home/nicolas/valve_ws/install/valve_pkg/lib/python3.10/site-packages/valve_pkg-0.0.1-py3.10.egg-info' (and everything under it)
+Copying ../../build/valve_pkg/valve_pkg.egg-info to /home/nicolas/valve_ws/install/valve_pkg/lib/python3.10/site-packages/valve_pkg-0.0.1-py3.10.egg-info
+running install_scripts
+Installing valve_node script to /home/nicolas/valve_ws/install/valve_pkg/lib/valve_pkg
+writing list of installed files to '/home/nicolas/valve_ws/build/valve_pkg/install.log'
