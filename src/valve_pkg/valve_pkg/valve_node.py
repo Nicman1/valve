@@ -8,13 +8,13 @@ class ValveNode(Node):
         self.OPEN_VALVE = pwm
         self.CLOSE_VALVE = 0
 
-        self.publisher = self.create_publisher(String, '/valve_status', 10)
+        self.publisher = self.create_publisher(String, '/valve_status', 1)
 
         self.subscription = self.create_subscription(
             String,
             '/valve_control',
             self.valve_callback,
-            10
+            1
         )
 
         self.get_logger().info('Valve Node Initialized. Waiting for commands...')
