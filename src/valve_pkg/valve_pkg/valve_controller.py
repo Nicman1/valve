@@ -7,13 +7,13 @@ class ValveController(Node):
         super().__init__('valve_controller')
         self.buckets = buckets
         self.mlWater = 4000
-        self.publisher = self.create_publisher(String, '/valve_control', 10)
+        self.publisher = self.create_publisher(String, '/valve_control', 1)
         
         self.status_subscription = self.create_subscription(
             String,
             '/valve_status',
             self.status_callback,
-            10
+            1
         )
         
         self.get_logger().info("Valve Controller Initialized")
@@ -67,7 +67,7 @@ class ValveController(Node):
 
 def main():
     rclpy.init()
-    node = ValveController(2)
+    node = ValveController(7)
 
     try:
         node.await_input()
