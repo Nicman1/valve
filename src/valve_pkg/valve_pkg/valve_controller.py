@@ -3,8 +3,10 @@ from rclpy.node import Node
 from std_msgs.msg import String
 
 class ValveController(Node):
-    def __init__(self, seconds):
+    def __init__(self, buckets):
         super().__init__('valve_controller')
+        self.buckets = buckets
+        self.mlWater = 4000
         self.publisher = self.create_publisher(String, '/valve_control', 10)
         
         self.status_subscription = self.create_subscription(
@@ -14,18 +16,28 @@ class ValveController(Node):
             10
         )
         
-        self.get_logger().info("Valve Controller Initialized. Press Enter to send 'open'.")
+        self.get_logger().info("Valve Controller Initialized")
         
         self.timer = None
-        self.timer_interval = seconds  
+        self.timer_interval = None
         self.open_sent = False
+        self.calculate_open_time()
+
+    def calculate_open_time(self):
+        """Calculates the time the valve should stay open based on the amount of water left"""
+        base_time = 5
+        max_water = 4000 
+
+        "faire la fonction de temps ici!!"
+        open_time = (base_time) * (max_water/ self.mlWater) * (8/self.buckets)
+        self.timer_interval = open_time
+        self.mlWater = self.mlWater - max_water / self.buckets
 
     def send_command(self, command):
         """Publishes a command to the /valve_control topic"""
         msg = String()
         msg.data = command
         self.publisher.publish(msg)
-        self.get_logger().info(f'Sent command: {command}')
 
     def status_callback(self, msg):
         """Handles incoming status messages from /valve_status"""
@@ -34,17 +46,20 @@ class ValveController(Node):
 
     def timer_callback(self):
         """Callback function for the timer to send 'close' after a specified interval"""
+        if self.mlWater <= 0:
+            self.mlWater = 4000
         self.send_command("close")
         self.timer.cancel()
         self.await_input()
 
     def start_timer(self):
         """Starts a timer to send 'close' after a specified interval"""
+        self.calculate_open_time()
         self.timer = self.create_timer(self.timer_interval, self.timer_callback)
 
     def await_input(self):
         """Awaits user input to start the cycle again"""
-        self.get_logger().info("Press Enter to send 'open' again.")
+        self.get_logger().info("Press Enter to send 'open'")
         input()
         self.send_command("open")
         self.get_logger().info(f"Starting timer for {self.timer_interval} seconds")
@@ -52,7 +67,7 @@ class ValveController(Node):
 
 def main():
     rclpy.init()
-    node = ValveController(10)
+    node = ValveController(2)
 
     try:
         node.await_input()

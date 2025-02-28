@@ -46,6 +46,7 @@ class ValveNode(Node):
         msg.data = status_message
         self.publisher.publish(msg)
         self.get_logger().info(f'Sent status: {status_message}')
+        
 
 def main():
     rclpy.init()
